@@ -1,0 +1,13 @@
+numpy~=1.18.1
+scikit-learn~=0.21.3
+pandas~=1.0.1
+loguru~=0.4.1
+nilmtk~=0.4.0
+pyts~=0.10.0
+tslearn~=0.3.0
+scikit-multilearn~=0.2.0
+psutil~=5.6.7
+matplotlib~=3.2.0
+fuzzywuzzy~=0.17.0
+numba~=0.48.0
+PyWavelets
