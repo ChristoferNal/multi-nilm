@@ -6,14 +6,14 @@ from experiments.experiments import GenericExperiment
 from nilmlab import exp_model_list
 from nilmlab.factories import EnvironmentFactory
 from nilmlab.lab import TimeSeriesLength
-from nilmlab.exp_model_list import CLF_MODELS, TRANSFORMER_MODELS
+from nilmlab.exp_model_list import CLF_MODELS, TRANSFORMER_MODELS, SAX
 from utils.logger import debug
 
 dirname = os.path.dirname(__file__)
 dirname = os.path.join(dirname, "../results")
 if not os.path.exists(dirname):
     os.mkdir(dirname)
-same_datasource_exp_checkpoint = os.path.join(dirname, '../results_from_generic_exp.csv')
+same_datasource_exp_checkpoint = os.path.join(dirname, 'results_from_generic_exp.csv')
 
 appliances = ['microwave', 'dish washer', 'fridge', 'kettle', 'washer dryer',
               'toaster', 'television', 'hair dryer', 'vacuum cleaner']
@@ -38,6 +38,8 @@ elif window == TimeSeriesLength.WINDOW_1_DAY:
     models = exp_model_list.selected_models_24h
 
 for k in models.keys():
+    if k is not SAX:
+        continue
     experiment.setup_running_params(
         transformer_models=models[k][TRANSFORMER_MODELS],
         classifier_models=models[k][CLF_MODELS],

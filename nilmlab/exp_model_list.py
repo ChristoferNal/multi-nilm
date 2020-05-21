@@ -70,7 +70,7 @@ selected_models_10mins = {
             RandomForestClassifier(n_jobs=-1, n_estimators=100)
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=10)
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10)
         ]
     },
     SAX       : {
@@ -78,7 +78,7 @@ selected_models_10mins = {
             MLPClassifier(hidden_layer_sizes=(2000), learning_rate='adaptive', solver='adam')
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=50, supports_approximation=True)
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=50, supports_approximation=True)
         ]
     }
 }
@@ -188,10 +188,10 @@ selected_models_4h = {
             ExtraTreesClassifier(n_jobs=-1, n_estimators=100)
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=20),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=20),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=10),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=50)
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=20),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=20),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=50)
         ]
     },
     SAX       : {
@@ -202,10 +202,10 @@ selected_models_4h = {
             MLPClassifier(hidden_layer_sizes=(1000, 100), learning_rate='adaptive', solver='adam')
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=50, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=100, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=50, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=100, supports_approximation=True)
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=50, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=10, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=50, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=10, supports_approximation=True)
         ]
     }
 }
@@ -314,10 +314,10 @@ selected_models_8h = {
             MLPClassifier(hidden_layer_sizes=(1000,), learning_rate='adaptive', solver='adam')
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=100),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=100),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=10),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=20)
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=20)
         ]
     },
     SAX       : {
@@ -331,7 +331,7 @@ selected_models_8h = {
             TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=100, supports_approximation=False),
             TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=10, supports_approximation=False),
             TransformerFactory.build_tslearn_sax(n_paa_segments=10, n_sax_symbols=20, supports_approximation=False),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=20, supports_approximation=True)
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=20, supports_approximation=True)
         ]
     }
 }
@@ -445,10 +445,10 @@ selected_models_1h = {
             ExtraTreesClassifier(n_jobs=-1, n_estimators=200)
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=50),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=10),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=10),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=50)
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=50),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=50)
         ]
     },
     SAX       : {
@@ -459,10 +459,10 @@ selected_models_1h = {
             MLPClassifier(hidden_layer_sizes=(1000,), learning_rate='adaptive', solver='adam'),
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=100, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=50, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=100, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=50, supports_approximation=True)
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=10, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=50, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=10, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=50, supports_approximation=True)
         ]
     }
 }
@@ -571,10 +571,10 @@ selected_models_2h = {
             RandomForestClassifier(n_jobs=-1, n_estimators=100)
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=100),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=100),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=20),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=20)
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=20),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=20)
         ]
     },
     SAX       : {
@@ -585,10 +585,10 @@ selected_models_2h = {
             MLPClassifier(hidden_layer_sizes=(2000, 100), learning_rate='adaptive', solver='adam')
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=50, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=100, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=50, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=50, supports_approximation=True)
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=50, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=10, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=50, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=50, supports_approximation=True)
         ]
     }
 }
@@ -686,10 +686,10 @@ selected_models_24h = {
             MLPClassifier(hidden_layer_sizes=(1000,), learning_rate='adaptive', solver='adam', activation='logistic')
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=10),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=20),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=50),
-            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=500, n_sax_symbols=100)
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=10),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=20),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=50),
+            TransformerFactory.build_tslearn_one_d_sax(n_paa_segments=50, n_sax_symbols=100)
         ]
     },
     SAX       : {
@@ -700,10 +700,10 @@ selected_models_24h = {
             MLPClassifier(hidden_layer_sizes=(2000), learning_rate='adaptive', solver='adam')
         ],
         TRANSFORMER_MODELS: [
-            TransformerFactory.build_tslearn_sax(n_paa_segments=500, n_sax_symbols=100, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=50, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=100, supports_approximation=True),
-            TransformerFactory.build_tslearn_sax(n_paa_segments=200, n_sax_symbols=50, supports_approximation=True)
+            TransformerFactory.build_tslearn_sax(n_paa_segments=50, n_sax_symbols=10, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=50, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=10, supports_approximation=True),
+            TransformerFactory.build_tslearn_sax(n_paa_segments=20, n_sax_symbols=50, supports_approximation=True)
         ]
     }
 }

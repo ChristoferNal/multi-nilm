@@ -5,10 +5,13 @@ import numpy as np
 import pandas as pd
 import psutil
 import pywt
+from loguru import logger
 from pyts import approximation, transformation
 from sklearn.base import TransformerMixin
 from sklearn.externals import joblib
 from tslearn import utils as tsutils
+from tslearn.piecewise import SymbolicAggregateApproximation, OneD_SymbolicAggregateApproximation
+from tslearn.preprocessing import TimeSeriesScalerMeanVariance
 
 from nilmlab.lab import TimeSeriesTransformer, TransformerType
 from utils import chaotic_toolkit
@@ -262,6 +265,10 @@ class TSLearnTransformerWrapper(TimeSeriesTransformer):
         ts_representation = list()
         debug(f'TSLearnApproximatorWrapper.approximate: param series \n{series} ')
         for segment in series:
+            if isinstance(self.transformer, SymbolicAggregateApproximation) or isinstance(self.transformer, OneD_SymbolicAggregateApproximation):
+                logger.info("Scaling the data so that they consist a normal distribution.")
+                scaler = TimeSeriesScalerMeanVariance(mu=0., std=1.)  # Rescale time series
+                segment = scaler.fit_transform(segment)
             ts_representation.append(self.transformer.fit_transform(segment))
         # debug('TSLearnApproximatorWrapper.approximate: ts_representation \n{}'.format(ts_representation))
         debug('TSLearnApproximatorWrapper.approximate: ts_representation shape {}'.format(np.shape(ts_representation)))
